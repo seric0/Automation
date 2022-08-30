@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">            
+    <!-- Шрифты  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
+     <!-- Скрипт для показа 2gis карты -->   
+    <script src="https://maps.api.2gis.ru/2.0/loader.js?pkg=full"></script>
+    <script type="text/javascript">
+        var map;
+
+        DG.then(function () {
+            map = DG.map('map', {
+                center: [53.22, 63.58],
+                zoom: 13
+            });
+
+            DG.marker([54.98, 82.89]).addTo(map).bindPopup('Вы кликнули по мне!');
+        });
+    </script>
+
+    <!-- Стили -->
+    <link rel="stylesheet" href="css/contact.css">
+    <title>Contact</title>
+</head>
+<body>    
+    <header class="header">
+        <div class="header__top container">
+            <nav class="header__nav">
+                <a href="index.html"><img src="img/logo.svg" alt="logo"></a>
+                <a href="contact.html"><img src="img/contacts.svg" alt="contacts"></a>
+            </nav>
+        </div>
+        <div class="header_background">
+            <h1 class="header_heading">Contact Us</h1>
+            <p class="header_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                incididunt ut labore et dolore magna aliqua. </p>
+        </div>
+    </header>
+    <section class="contacts">
+        <div class="container">
+            <div class="contacts__wrapper">
+                <div class="contacts__left">
+                    <img class="contacts__left_img" src="img/contact_us.png" alt="background">
+                    <div class="contacts__block">
+                        <h2 class="contacts__block_heading">Address</h2>
+                        <p class="contacts__block_text">Id convallis placerat sit sed duis id amet volutpat quam a,
+                            pharetra.</p>
+                    </div>
+                    <div class="contacts__block">
+                        <h2 class="contacts__block_heading">Phone</h2>
+                        <ul class="contacts__block_list">
+                            <li class="contacts__block_item">+7-812-7313-4321</li>
+                            <li class="contacts__block_item">+7-817-0000-1234</li>
+                        </ul>
+                    </div>
+                    <div class="contacts__block">
+                        <h2 class="contacts__block_heading">Online service</h2>
+                        <ul class="contacts__block_list">
+                            <li class="contacts__block_item contacts__block_item-site">www.site.com</li>
+                            <li class="contacts__block_item contacts__block_item-email">hello.site@gmail.com</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="contacts__right">
+                    <form class="contacts__form">
+                        <h3 class="contacts__form_heading">SEND US MESSAGE</h3>
+                        <label class="contacts__form_label" for="name">Full Name</label>
+                        <input class="contacts__form_input" id="name" type="text" placeholder="Your Name">
+                        <label class="contacts__form_label" for="email">Email</label>
+                        <input class="contacts__form_input" id="email" type="email" placeholder="Your Email">
+                        <label class="contacts__form_label" for="message">Message</label>
+                        <textarea class="contacts__form_textarea" id="message" placeholder="Your Message"></textarea>
+                        <input class="contacts__form_btn" type="submit" value="Submit">
+                    </form>
+                </div>
+            </div>
+        </div>        
+    </section> 
+    <section class="contacts__map">
+        <div id="map" style="width:940px; height:480px"></div>
+    </section>
+<footer class="footer">
+        <div class="container">
+            <div class="footer__row">
+                <div class="footer__row_left">
+                    <h2 class="footer__row_heading">Intersted to woek
+                        with our team?</h2>
+                    <p class="footer__row_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+                </div>
+                <div class="footer__row_right">
+                    <a class="footer__row_link" href="#">Let’s Talk</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer__line"></div>
+        <div class="container">
+            <div class="footer__contacts">
+                <ul class="footer__contacts_list">
+                    <li class="footer__contacts_item">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
+                    <li class="footer__contacts_item">+7-812-7313-4321</li>
+                    <li class="footer__contacts_item">hello.site@gmail.com</li>
+                </ul>
+            </div>
+            <div class="footer__copyright">
+                <p class="footer__copyright_text">2021 All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
